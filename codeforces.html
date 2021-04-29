@@ -142,7 +142,7 @@
         </div>
         <div class="country" id="country">Country</div>
         <div class="City" id="City">City</div>
-        <div class="organisation" id="organisation">Organisation</div>
+        <div class="organisation" id="organisation">Organization</div>
         <div class="other">
           <a id="rank"><span id="rank">00</span>Rank</a>
           <a id="rating"><span id="rating">00</span>Rating</a>
@@ -161,7 +161,7 @@
             $("#name").html(data.result[0].firstName);
             
             $("#City").html( data.result[0].city);
-            $("organisation").html(data.result[0].organisation)
+            $("#organisation").html(data.result[0].organization);
             $("#country").html(data.result[0].country);
             $("#rating").html(data.result[0].rating);
             $("#rank").html(data.result[0].rank);

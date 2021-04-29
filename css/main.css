@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,700&display=swap');
 
 body {
-    background: rgb(173, 170, 164);
+    background: #CAEBF2;
     margin: 0;
     font-family: 'Ubuntu Mono', monospace;
 }
@@ -81,7 +81,7 @@ body {
   }
 
   .Languages {
-    background: #faf9f7; background: linear-gradient(#648880, #293f50); border-radius: 6px; height: 400px; 
+    background:#a5d1e1;
       color: rgb(7, 7, 6);
       font-size: 1.5em;
       
@@ -139,7 +139,7 @@ body {
 
   .contests {
     font-size: 2em;
-    background: #738590;
+    background: #199fb1;
     
   }
 
@@ -151,7 +151,7 @@ body {
     width: 100%;
     left: 0;
     top: 0;
-    background-color: #63777e;
+    background : #CAEBF2;
     font-family: 'Ubuntu Mono', monospace;
     
     padding-top: 1.2em;
