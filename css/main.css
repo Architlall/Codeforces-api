@@ -193,7 +193,7 @@ body {
     width: 300px;
     
     margin: 0 auto;
-    background-color: rgba(150, 86, 150, 0.438);
+    background-color: #c0ced1;
     backdrop-filter: blur(6px);
     margin-top: 40px;
     border-radius: 10px;
