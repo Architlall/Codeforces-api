@@ -1,0 +1,319 @@
+/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    background: rgb(173, 170, 164);
+    margin: 0;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.navbar {
+    background: rgb(19, 15, 15);
+    padding: 1em;
+  }
+
+  .navbar .logo {
+    text-decoration: none;
+    font-weight: bold;
+    color:white;
+    font-size: 1.6em;
+  }
+
+  
+  .navbar nav {
+    display: none;
+  }
+  
+  .navbar .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-content: space-between;
+  }
+  
+  .navbar .mobile-menu {
+    cursor: pointer;
+  }
+  
+
+  a {
+    color: #444444;
+  }
+
+  section {
+    padding: 5em 2em;
+  }
+  
+  .hero {
+    text-align: center;
+  }
+  
+  .left-col .subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(167, 24, 24);
+    letter-spacing: .3em;
+    font-size: 1.2em;
+  }
+
+  .left-col h1 {
+    font-size: 4em;
+    line-height: 1.3em;
+    margin-top: .2em;
+  }
+
+  .container span {
+    color: blue;
+  }
+
+  .codeforces {
+      width : 10%;
+      display: inline-block
+     
+      
+                    
+    }
+
+  .programmer {
+    width: 60%;
+    margin-top: 3em;
+    height:auto
+  }
+
+  .Languages {
+    background: #faf9f7; background: linear-gradient(#648880, #293f50); border-radius: 6px; height: 400px; 
+      color: rgb(7, 7, 6);
+      font-size: 1.5em;
+      
+
+
+  }
+
+  ul.languages-list {
+    margin: 0;
+    padding-left: .1em;
+    
+  }
+  
+  ul.languages-list li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+    position: relative;
+    
+    
+  }
+
+
+  
+
+  .list {
+    list-style: none;
+  }
+  .list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .lang-img {
+    margin-left: 3rem;
+    height: 3rem;
+    width: 3rem;
+
+  }
+  
+  .languagename {
+    font-size: 1.5em;
+  }
+  
+  .coding-img {
+    float: right;
+    width: 40%;
+    height: 20em;
+   
+
+    
+  }
+
+
+  .contests {
+    font-size: 2em;
+    
+  }
+
+
+
+  .main-container {
+    
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(59, 224, 230);
+    font-family: 'Ubuntu Mono', monospace;
+    
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+      
+    
+  }
+  .search-container {
+    width: 300px;
+    margin: 20px auto;
+    
+    background: #fff;
+    display: flex;
+    padding-left: 7px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 40px;
+    gap: 1%;
+    
+    
+  }
+  .input {
+    border: none;
+    outline: none;
+    width: 90%;
+  }
+  .input:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+  }
+  .search {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: rgb(29, 10, 10);
+    height: 100%;
+    background-color: rgb(59, 128, 255);
+  }
+  .profile {
+    width: 300px;
+    margin: 0 auto;
+    background-color: rgba(150, 86, 150, 0.438);
+    backdrop-filter: blur(6px);
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 500;
+    text-align: center;
+    padding: 1 em;
+  }
+  .img-name {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+  }
+  .img {
+    height: 80px;
+    width: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .City {
+    max-width: 100%;
+    word-break: normal;
+    padding: 30px 10px;
+    text-align: center;
+    font-family: 'Ubuntu mono'
+  }
+  .email {
+    color: rgb(53, 52, 52);
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold
+    ;
+  }
+  .other {
+    width: 100%;
+    display: flex;
+    height: 90px;
+    border-top: 1px solid grey;
+  }
+  .other a {
+    width: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.438);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  #rank,
+  #rating {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+
+  @media only screen and (min-width: 1450px) {
+
+   
+    .contests:before {
+      content: '';
+      position: absolute;
+      width: 10%;
+      height: 20em;
+     
+      left: 0;
+      top: -4em;
+    }
+    .contests:after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 20em;
+     
+      left: 4.5em;
+      top: 2em;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .coding-img{
+      display: none;
+    }
+  }
+
+  nav ul.primary-nav {
+    margin-top: 5em;
+  }
+
+  .mobile-menu-exit {
+    float: right;
+    margin: .5em;
+    cursor: pointer;
+  }
+
+  nav.menu-btn {
+    display: block;
+  }
+  
+  nav {
+    position: fixed;
+   
+    width: 66%;
+    right: 0;
+    top: 0;
+    background: #20272E;
+    height: 100vh;
+    padding: 1em;
+  }
+
+  nav li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5em;
+    font-size: 1.3em;
+    text-align: right;
+  }
+  
+ 
+
+
+

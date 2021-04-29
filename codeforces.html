@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codeforces website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./info.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+           
+            <a class="logo" href="#">HOME</a>
+            <img id="mobile-cta" class="mobile-menu" src="Images/icons8-menu-24.png" alt="Open Navigation"> 
+
+            
+            <nav>
+              <img id="mobile-exit" class="mobile-menu-exit" src="Images/exit.svg" alt="Close Navigation">
+                
+                
+                <ul class="primary-nav">
+                    
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#">Contests</a></li>
+                    <li><a href="#">Rating</a></li>
+                    <li><a href="#">Help</a></li>
+                  
+
+                <ul class="secondary-nav">
+                    
+                    <li class="register"><a href="#">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                
+                <h1>WELCOME TO CODE<span>FORCES</span></h1>
+                <img src="Images/codeforces-svgrepo-com.svg" class= "codeforces" alt= "">
+                <p class="subhead">Compete against the best, Be the best.</p>
+
+                <div class="hero-cta">
+                    
+                    
+                        <img src="Images/coding1.jpg" class= "programmer" alt="">
+                   
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class= "Languages">
+        <div class="container">
+            <h2><u>CODE WITH ANY LANGUAGE</u></h2>
+            <ul class="list">
+                <li class="list-item">
+                  <div class="languagename">
+                    c
+                  </div>
+                  <div class="languageimg">
+                    <img src="Images/icons8-c-programming-48.png" class="lang-img">
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="languagename">
+                    c++
+                  </div>
+                  <div class="languageimg">
+                    <img src="Images/icons8-c++-50.png" class="lang-img">
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="languagename">
+                    JAVA
+                  </div>
+                  <div class="languageimg">
+                    <img src="Images/58480979cef1014c0b5e4901.png" class="lang-img">
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="languagename">
+                    PYTHON
+                  </div>
+                  <div class="languageimg">
+                    <img src="Images/icons8-python-file-50.png" class="lang-img">
+                  </div>
+                </li>
+              </ul>
+              <div class="codingimg">
+                <img src= "Images/computers.svg" class= "coding-img">
+              </div>              
+
+           
+        </div>
+    </section>
+
+    <section class="contests">
+        <div class="container">
+            <h2>Upcoming Contests</h2>
+            <ul class="contests-list">
+                <li><a href="#" class= "contest1"> Codeforces Round #891</a> </li>
+                <li><a href="#" class= "contest2"> Codeforces Round #892</a> </li>
+                
+            </ul>
+
+            
+        </div>
+    </section>
+
+
+
+   
+    <div class="main-container">
+      <div class="search-container">
+        <input
+          type="text"
+          name="Username"
+          id="input"
+          class="input"
+          placeholder="Your Codeforces handle"
+        />
+        <button id="search" class="search">Search</button>
+      </div>
+      <div class="profile">
+        <div class="img-name">
+          <img
+            src="Images/profile.png"
+            alt=""
+            id="img"
+            class="img"
+          /><br />
+          <span class="name" id="name">Name</span><br />
+         
+        </div>
+        <div class="country" id="country">Country</div>
+        <div class="City" id="City">City</div>
+        <div class="organisation" id="organisation">Organisation</div>
+        <div class="other">
+          <a id="rank"><span id="rank">00</span>Rank</a>
+          <a id="rating"><span id="rating">00</span>Rating</a>
+        </div>
+      </div>
+      </div>
+
+
+      <script>
+        $("#search").click(() => {
+        $.getJSON(
+          "https://codeforces.com/api/user.info?handles=" + $("#input").val(),
+          (data) => {
+           
+            $("#img").attr("src", data.result[0].titlePhoto);
+            $("#name").html(data.result[0].firstName);
+            
+            $("#City").html( data.result[0].city);
+            $("organisation").html(data.result[0].organisation)
+            $("#country").html(data.result[0].country);
+            $("#rating").html(data.result[0].rating);
+            $("#rank").html(data.result[0].rank);
+            
+            
+          }
+        );
+      });
+      
+
+</script>
+
+<script>
+
+  const mobileBtn = document.getElementById('mobile-cta')
+        nav = document.querySelector('nav')
+        mobileBtnExit = document.getElementById('mobile-exit');
+
+  mobileBtn.addEventListener('click', () => {
+      nav.classList.add('menu-btn');
+  })
+
+  mobileBtnExit.addEventListener('click', () => {
+      nav.classList.remove('menu-btn');
+  })
+
+
+
+</script>
+
+
+
+     
+   
+    
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
