@@ -139,6 +139,7 @@ body {
 
   .contests {
     font-size: 2em;
+    background: #738590;
     
   }
 
@@ -150,7 +151,7 @@ body {
     width: 100%;
     left: 0;
     top: 0;
-    background-color: rgb(59, 224, 230);
+    background-color: #63777e;
     font-family: 'Ubuntu Mono', monospace;
     
     padding-top: 1.2em;
@@ -184,12 +185,13 @@ body {
     border: none;
     cursor: pointer;
     outline: none;
-    color: rgb(29, 10, 10);
+    color: white;
     height: 100%;
-    background-color: rgb(59, 128, 255);
+    background-color: #0d1216;
   }
   .profile {
     width: 300px;
+    
     margin: 0 auto;
     background-color: rgba(150, 86, 150, 0.438);
     backdrop-filter: blur(6px);
