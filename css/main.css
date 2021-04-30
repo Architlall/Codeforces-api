@@ -189,9 +189,9 @@ body {
     height: 100%;
     background-color: #0d1216;
   }
-  .profile {
+  #profile {
     width: 300px;
-    
+    display: none;
     margin: 0 auto;
     background-color: #c0ced1;
     backdrop-filter: blur(6px);
@@ -250,7 +250,7 @@ body {
     font-size: 20px;
     font-weight: bold;
   }
-  
+
 
   @media only screen and (min-width: 1450px) {
 
