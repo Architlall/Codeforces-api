@@ -7,6 +7,8 @@ body {
     font-family: 'Ubuntu Mono', monospace;
 }
 
+
+
 .navbar {
     background: rgb(19, 15, 15);
     padding: 1em;
@@ -251,11 +253,17 @@ body {
     font-weight: bold;
   }
 
+  .login {
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 1em;
+  }
 
 
   .contestsfetch {
-    width: 700px;
+    width: 650px;
     margin: 50px auto;
+
     text-align: center;
     position: relative;
   
@@ -269,6 +277,14 @@ body {
     overflow: hidden;
     font-weight: 500;
   }
+
+  .prevcont {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
   .dets {
     padding-left: 100px;
     text-align: left;
@@ -328,8 +344,10 @@ body {
   
 
 
-  @media only screen and (min-width: 1450px) {
+  @media only screen and (min-width: 600px) {
 
+
+    
    
     .contests:before {
       content: '';
@@ -354,6 +372,10 @@ body {
   @media only screen and (max-width: 600px) {
     .coding-img{
       display: none;
+    }
+
+    .contestsfetch {
+      width: 320px;
     }
   }
 
@@ -390,7 +412,19 @@ body {
     font-size: 1.3em;
     text-align: right;
   }
+
+  .none {
+
+    height: 0;
+  }
   
+
+  .error {
+
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+  }
  
 
 

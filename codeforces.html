@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Codeforces website</title>
     <link rel="stylesheet" href="css/main.css">
+   
     <script src="./info.js" ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     
 </head>
 <body>
@@ -119,6 +121,7 @@
 
    
     <div class="main-container">
+      <p class= "login"> LOGIN By entering your user handle :- </p>
       <div class="search-container">
         <input
           type="text"
@@ -141,7 +144,6 @@
          
         </div>
         <div class="country" id="country">Country</div>
-        <div class="text" id="text">text</div>
         
         <div class="City" id="City">City</div>
         <div class="organisation" id="organisation">Organization</div>
@@ -152,9 +154,13 @@
       </div>
       
       </div>
-     
+     <div id="error" class="error"></div>
+
+     <br> <br> <br>
 
       <div class="contestsfetch">
+
+        <p class= "prevcont">PREVIOUS CONTESTS</p>
        
         <div class="dets">
           <br>
@@ -251,26 +257,37 @@
             const api = `https://codeforces.com/api/user.info?handles= ${username}`
             const response = await fetch(api);
             const data = await response.json();
-            if(document.getElementById('input').value.length == 0 || `https://codeforces.com/api/user.info?handles= ${username}` == 'https://codeforces.com/api/user.info?handles= undefined') {
-            document.getElementById('text').innerHTML = "Enter a valid codeforces username";}
-          
+            console.log(response.status);
+            const varstat=response.status;
+            var elem=document.getElementById('profile');
+            if(response.status != 200)
+            {
+            console.log(response.status)  
+            elem.classList.add("none");
+            document.getElementById('error').innerHTML="Invalid username";
+            }
+            if((data.result[0].firstName) && data.result[0].country)
+            {
+              document.getElementById('img').src = data.result[0].titlePhoto ;
+              document.getElementById('name').innerHTML = data.result[0].firstName + " "+ data.result[0].lastName;
+              document.getElementById('country').innerHTML = data.result[0].country;
+              document.getElementById('City').innerHTML = data.result[0].city;
+              document.getElementById('rating').innerHTML = data.result[0].rating;
+              document.getElementById('rank').innerHTML = data.result[0].rank;
+              document.getElementById('organisation').innerHTML = data.result[0].organization;
+              elem.classList.remove("none");
+              document.getElementById('error').innerHTML=" ";
+            }
+            else
+            {
+              elem.classList.add("none");
+              document.getElementById('error').innerHTML="Invalid username";
+            }
 
-            document.getElementById('img').src = data.result[0].titlePhoto ;
-            document.getElementById('name').innerHTML = data.result[0].firstName + " "+ data.result[0].lastName;
-            document.getElementById('country').innerHTML = data.result[0].country;
-            document.getElementById('City').innerHTML = data.result[0].city;
-            document.getElementById('rating').innerHTML = data.result[0].rating;
-            document.getElementById('rank').innerHTML = data.result[0].rank;
-            
-           
-            document.getElementById('organisation').innerHTML = data.result[0].organization;
-           
           }
         
 
        
-
-          console.log(`https://codeforces.com/api/user.info?handles= ${username}`=='https://codeforces.com/api/user.info?handles= undefined')
 
         function myFunction() {
          
@@ -370,4 +387,3 @@ var index = 0;
 
 </body>
 </html>
-
